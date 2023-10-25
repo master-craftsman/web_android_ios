@@ -19,15 +19,15 @@ IS_IOS = PLATFORM == 'IOS'
 APPIUM_SERVER = env.get('APPIUM_SERVER', 'http://localhost:4723/wd/hub')
 
 APP_NAME = {
-    'IOS': env.get('IOS_APP_NAME', 'UptickCrmMobile.app'),
+    'IOS': env.get('IOS_APP_NAME', 'Runner.ipa'),
     'ANDROID': env.get('ANDROID_APP_NAME', 'app-release.apk')
 }.get(PLATFORM)
 
 _DEFAULT_APP_PATH = str(os.path.join(os.getcwd(), fr"mobile_app/{APP_NAME}"))
 MOBILE_APP = env.get('MOBILE_APP', _DEFAULT_APP_PATH) if IS_MOBILE else None
 
-ANDROID_VERSION = env.get('ANDROID_VERSION', '8.1.0')
-ANDROID_DEVICE_NAME = env.get('ANDROID_DEVICE_NAME', 'Pixel_2_XL_API_27')
+ANDROID_VERSION = env.get('ANDROID_VERSION', '12.0')
+ANDROID_DEVICE_NAME = env.get('ANDROID_DEVICE_NAME', 'Pixel_4_API_31')
 
-IOS_VERSION = env.get('IOS_VERSION', '11.4')
-IOS_DEVICE_NAME = env.get('IOS_DEVICE_NAME', 'iPhone X')
+IOS_VERSION = env.get('IOS_VERSION', '16.2')
+IOS_DEVICE_NAME = env.get('IOS_DEVICE_NAME', 'iPhone 14')

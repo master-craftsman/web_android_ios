@@ -2,6 +2,9 @@ from appium import webdriver as appium_driver
 from selenium import webdriver as selenium_driver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 import config
 
@@ -25,7 +28,7 @@ _capabilities = {
         'noReset': False,
         'fullReset': False,
         'newCommandTimeout': config.test_run.APPIUM_TIMEOUT,
-        "automationName": "UiAutomator2",
+        "automationName": "FLUTTER",
         "browserName": ""
     },
     'WEB': {
@@ -51,3 +54,4 @@ def get():
 
 def close(driver):
     driver.close_app() if config.test_run.IS_MOBILE else driver.quit()
+

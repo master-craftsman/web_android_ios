@@ -23,9 +23,9 @@ def assert_page_name(page_name):
 def visit_page(page_name):
     page = page_name.lower()
     assert_page_name(page)
-    if config.test_run.IS_WEB:
-        browser.open_url(config.routing.LOGIN_PAGE_URL)
+    # if config.test_run.IS_WEB:
+    #     browser.open_url(config.routing.LOGIN_PAGE_URL)
     # uncomment if your mobile app have environment choosing screen
-    # if page_name.lower() == 'login':
-    #     if config.test_run.IS_MOBILE:
-    #         team_form.type_url(text=config.routing.ORGANIZATION_URL)
+    if page_name.lower() == 'login':
+        if config.test_run.IS_MOBILE:
+            team_form.type_url(text=config.routing.ORGANIZATION_URL)

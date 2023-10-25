@@ -4,8 +4,7 @@ import config
 
 
 def test_login_with_login_and_password(app):
-    app.visit_page(page_name='login')
-
+    # app.visit_page(page_name='login')
     app.login_form.login_with(
         email=config.auth.DEFAULT_LOGIN,
         password=config.auth.DEFAULT_PASSWORD

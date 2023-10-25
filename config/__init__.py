@@ -1,3 +1,3 @@
-from . import auth
-from . import test_run
-from . import routing
+from config import auth
+from config import test_run
+from config import routing
